@@ -34,7 +34,7 @@ class GrantMakeCommand extends GeneratorCommand
      */
     protected function getStub()
     {
-        return __DIR__.'/../stubs/grant.stub';
+        return __DIR__.'/grant.stub';
     }
 
     /**
