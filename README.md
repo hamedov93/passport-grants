@@ -4,6 +4,15 @@ Add custom grants to laravel passport.
 # Installation
 `composer require hamedov/passport-grants`
 
+# Supported passport versions
+
+| Passport version | Passport grants version |
+|:----------------:|:-----------------------:|
+|       ^7.0       |           ^1.0          |
+|       ^8.0       |           ^2.0          |
+|       ^9.0       |           ^3.0          |
+|       ^10.0      |           ^4.0          |
+
 # Usage
 
 - Create a new grant:
