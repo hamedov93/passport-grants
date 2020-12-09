@@ -36,17 +36,22 @@ class PassportGrantServiceProvider extends ServiceProvider
         // Get grants from auth config
         $grants = (array) config('auth.grants');
 
-        // Loop through the grants and enable them one by one
-        foreach ($grants as $grantClass) {
-            $grant = new $grantClass(
-                $this->app->make(RefreshTokenRepository::class)
-            );
+        try {
+            // Loop through the grants and enable them one by one
+            foreach ($grants as $grantClass) {
+                $grant = new $grantClass(
+                    $this->app->make(RefreshTokenRepository::class)
+                );
 
-            $grant->setRefreshTokenTTL(Passport::refreshTokensExpireIn());
+                $grant->setRefreshTokenTTL(Passport::refreshTokensExpireIn());
 
-            app(AuthorizationServer::class)->enableGrantType(
-                $grant, Passport::tokensExpireIn()
-            );
+                app(AuthorizationServer::class)->enableGrantType(
+                    $grant, Passport::tokensExpireIn()
+                );
+            }
+        } catch (\Exception $e) {
+            // May be passport has not been setup yet.
+            // I.E keys don't exist
         }
     }
 }
