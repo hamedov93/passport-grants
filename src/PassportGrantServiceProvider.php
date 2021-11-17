@@ -53,7 +53,7 @@ class PassportGrantServiceProvider extends ServiceProvider
                 );
             }
         } catch (\Exception $e) {
-            \Log::error('Passport grants error: ', $e->getMessage());
+            \Log::error('Passport grants error: ', [$e->getMessage()]);
         }
     }
 }
