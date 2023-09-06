@@ -6,12 +6,13 @@ Add custom grants to laravel passport.
 
 # Supported passport versions
 
-| Passport version | Passport grants version |
-|:----------------:|:-----------------------:|
-|       ^7.0       |           ^1.0          |
-|       ^8.0       |           ^2.0          |
-|       ^9.0       |           ^3.0          |
-|       ^10.0      |           ^4.0          |
+| Passport version | Passport grants version |    Notes    |
+|:----------------:|:-----------------------:|:-----------:|
+|       ^7.0       |           ^1.0          |  --     --  |
+|       ^8.0       |           ^2.0          |  --     --  |
+|       ^9.0       |           ^3.0          |  --     --  |
+|       ^10.0      |           ^4.0          |  --     --  |
+|       ^11.0      |           ^5.0          |[Follow link](https://github.com/laravel/passport/blob/11.x/UPGRADE.md)|
 
 # Usage
 
